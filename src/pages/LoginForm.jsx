@@ -9,7 +9,7 @@ const initialFormData = {
   password: "",
 };
 
-const errorMessages = {
+export const errorMessages = {
   email: "Lütfen geçerli bir e‑posta adresi girin.",
   password: "Parolanız 4 ila 10 karakter arası olmalıdır.",
 };
@@ -125,6 +125,7 @@ const LoginForm = () => {
               type="email"
               onChange={handleChange}
               value={formData.email}
+              data-cy="email-input"
               //onChange={(event) => setEmail(event.target.value)}
               className="px-4 py-2 text-black  w-[310px] ml-[70px] border rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
@@ -146,6 +147,7 @@ const LoginForm = () => {
               type="password"
               value={formData.password}
               onChange={handleChange}
+              data-cy="password-input"
               //onChange={(event) => setPassword(event.target.value)}
               className=" px-4 py-2 text-black  w-[310px] ml-[70px] border rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
@@ -160,6 +162,7 @@ const LoginForm = () => {
               disabled={!isValid}
               //onClick={handleClick} // onClick olayını ekledik
               className="px-4 py-2 w-[310px] ml-[70px] bg-white text-black font-medium rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300"
+            data-cy="submit-button"
             >
               İleri
             </button>
