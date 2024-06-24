@@ -162,7 +162,7 @@ const LoginForm = () => {
               disabled={!isValid}
               //onClick={handleClick} // onClick olayını ekledik
               className="px-4 py-2 w-[310px] ml-[70px] bg-white text-black font-medium rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300"
-            data-cy="submit-button"
+              data-cy="submit-button"
             >
               İleri
             </button>
