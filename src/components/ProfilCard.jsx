@@ -14,10 +14,8 @@ function ProfileCard() {
         </div>
         <div className="text-gray-400">@BrcuAydinn</div>
       </div>
-      <div className="ml-auto">
-        <button className="text-gray-400">
-          <p>...</p>
-        </button>
+      <div className="ml-[3rem]">
+        <button className="text-custom-open font-bold">...</button>
       </div>
     </div>
   );

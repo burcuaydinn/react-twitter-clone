@@ -62,7 +62,7 @@ const LoginForm = () => {
 
   function validatePassword(password) {
     let regex =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{4,10}$/;
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{4,60}$/;
     return regex.test(password);
   }
 
@@ -94,16 +94,16 @@ const LoginForm = () => {
           <IoCloseOutline />
         </button>
         <div className="flex justify-center mb-6">
-          <XIcon/>
+          <XIcon />
         </div>
         <h2 className="text-2xl font-bold text-center mb-6">X'e giriş yap</h2>
         <div className="mb-4">
           <button className="px-4 py-2  space-x-2 w-[310px] ml-[70px] mb-2 bg-white text-black border border-gray-300 rounded-full hover:bg-gray-200 flex items-center justify-center">
-            <GoogleIcon/>
-          <p className="">Google ile oturum açın </p>
+            <GoogleIcon />
+            <p className="">Google ile oturum açın </p>
           </button>
           <button className="px-4 mt-5  w-[310px] ml-[70px] bg-white text-black border border-gray-300 rounded-full flex items-center justify-center hover:bg-gray-100">
-           <AppleIcon/>
+            <AppleIcon />
             <span className="font-bold ">Apple ile giriş yap</span>
           </button>
         </div>
@@ -128,7 +128,12 @@ const LoginForm = () => {
               //onChange={(event) => setEmail(event.target.value)}
               className="px-4 py-2 text-black  w-[310px] ml-[70px] border rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            {errors.email && <p> {errorMessages.email}</p>}
+            {errors.email && (
+              <p className="mb-2 ml-[70px] mt-4 text-slate-400">
+                {" "}
+                {errorMessages.email}
+              </p>
+            )}
           </div>
 
           <div className="mt-4">
@@ -144,7 +149,11 @@ const LoginForm = () => {
               //onChange={(event) => setPassword(event.target.value)}
               className=" px-4 py-2 text-black  w-[310px] ml-[70px] border rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            {errors.password && <p>{errorMessages.password}</p>}
+            {errors.password && (
+              <p className="mb-2 ml-[70px] mt-4 text-slate-400">
+                {errorMessages.password}
+              </p>
+            )}
           </div>
           <div className="mt-6">
             <button
