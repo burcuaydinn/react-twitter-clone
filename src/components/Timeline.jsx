@@ -1,7 +1,7 @@
 import React from "react";
 
 const trends = [
-  { id: 1, title: "#gökhanhoca", posts: "3.730 posts" },
+  { id: 1, title: "#emrehoca", posts: "3.730 posts" },
   { id: 2, title: "Filenin Sultanları", posts: "103 B posts" },
   {
     id: 3,

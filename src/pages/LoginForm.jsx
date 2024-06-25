@@ -41,14 +41,14 @@ const LoginForm = () => {
       .then((response) => {
         // Başarılı girişten sonra işlemler
         setFormData(initialFormData); // Form verilerini temizle
-        console.log(response.data); // Gelen veriyi log'a yaz
+        console.log(response.data);
         // Yönlendirme yap
         history.push("/home");
       })
       .catch((error) => {
         // Hata durumunda yapılacak işlemler
         console.error("Giriş sırasında hata:", error);
-        // Kullanıcıya hata mesajı gösterilebilir veya başka işlemler yapılabilir
+        
       });
   }
 
@@ -88,7 +88,7 @@ const LoginForm = () => {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-custom-gray">
+    <div className="min-h-screen w-ful flex items-center justify-center bg-custom-gray">
       <div className="bg-custom-dark text-white px-20 py-8 rounded-lg w-[600px] shadow-lg relative">
         <button className="absolute top-4 left-2 text-gray-400 text-2xl hover:rounded-full hover:bg-custom-gray  hover:text-gray-200 ">
           <IoCloseOutline />
